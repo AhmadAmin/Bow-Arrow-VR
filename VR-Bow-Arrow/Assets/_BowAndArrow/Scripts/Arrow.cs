@@ -21,6 +21,7 @@ public class Arrow : XRGrabInteractable
         base.Awake();
         collider = GetComponent<Collider>();
         rigidbody = GetComponent<Rigidbody>();
+        selectMode = InteractableSelectMode.Multiple;
     }
 
     protected override void OnSelectEntering(SelectEnterEventArgs args)
@@ -57,7 +58,7 @@ public class Arrow : XRGrabInteractable
             SetLaunch(true);
             UpdateLastPosition();
             ApplyForce(notch.PullMeasurer);
-        }
+        } 
     }
 
     private void SetLaunch(bool value)

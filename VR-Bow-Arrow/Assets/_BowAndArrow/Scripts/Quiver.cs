@@ -9,6 +9,7 @@ public class Quiver : XRBaseInteractable
     {
         base.OnEnable();
         selectEntered.AddListener(CreateAndSelectArrow);
+        
     }
 
     protected override void OnDisable()
